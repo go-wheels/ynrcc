@@ -1,5 +1,11 @@
 package ynrcc
 
+const (
+	ServiceQueryTrxState      = "QueryTrxState"
+	ServiceMPCreateTrade      = "MPCreateTrade"
+	ServicePayResultMerNotify = "PayResultMerNotify"
+)
+
 type request struct {
 	Request any `json:"request"`
 }
