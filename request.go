@@ -1,6 +1,7 @@
 package ynrcc
 
 const (
+	ServiceCloseOrder         = "CloseOrder"
 	ServiceQueryTrxState      = "QueryTrxState"
 	ServiceMPCreateTrade      = "MPCreateTrade"
 	ServicePayResultMerNotify = "PayResultMerNotify"
@@ -17,6 +18,14 @@ type RequestCommon struct {
 	TxnTime  string `json:"txnTime"`
 	MerID    string `json:"merId"`
 	TemID    string `json:"temId"`
+}
+
+type CloseOrderRequest struct {
+	RequestCommon
+	TradeNo       string `json:"tradeNo"`
+	OriginTradeNo string `json:"originTradeNo"`
+	OrderID       string `json:"orderId"`
+	NotifyURL     string `json:"notifyUrl"`
 }
 
 type QueryTrxStateRequest struct {

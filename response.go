@@ -28,6 +28,11 @@ func (r ResponseCommon) Err() error {
 	return nil
 }
 
+type CloseOrderResponse struct {
+	ResponseCommon
+	State string `json:"state"`
+}
+
 type QueryTrxStateResponse struct {
 	ResponseCommon
 	TradeNo      string `json:"tradeNo"`
