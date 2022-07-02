@@ -76,6 +76,7 @@ func (c *Client) Execute(req, res any) (err error) {
 	}
 	httpReq.Header.Set("ynrcc-sign", reqSign)
 	httpReq.Header.Set("ynrcc-cert", c.cert)
+	httpReq.Header.Set("user-agent", "github.com/go-wheels/ynrcc")
 
 	httpRes, err := c.httpClient.Do(httpReq)
 	if err != nil {
