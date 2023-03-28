@@ -13,7 +13,7 @@ type request struct {
 
 type RequestCommon struct {
 	Service  string `json:"service"`
-	TranCode string `json:"tranCode"`
+	TranCode string `json:"tranCode,omitempty"`
 	SeqNo    string `json:"seqNo"`
 	TxnTime  string `json:"txnTime"`
 	MerID    string `json:"merId"`
